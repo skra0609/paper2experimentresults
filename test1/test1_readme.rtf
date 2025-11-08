@@ -1,0 +1,150 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fmodern\fcharset0 Courier;\f2\froman\fcharset0 Times-Roman;
+\f3\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+Overview\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs26 \cf0 Test 1
+\f2\fs24  represents the baseline configuration for empirical state-space analysis of the verified TLA\\texttt\{+\} model.\uc0\u8232 It establishes the foundation for subsequent scalability and OFAT screening experiments by using the minimal bounding constants required to exercise all protocol flows exactly once.\
+This run verifies correctness and ensures that the core protocol\'97covering credential issuance, attestation, verification, and revocation\'97executes without invariant violations under bounded conditions.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Purpose\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b0 \cf0 The goal of this test is to:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Validate the final secure specification (
+\f1\fs26 step5_revocation_fixed2_FIXED.tla
+\f2\fs24 ) under minimal bounds.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Measure total and distinct state counts for the base case.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Confirm that the model explores all semantically meaningful transitions without redundancy.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Serve as the baseline for comparative scaling (Tests 2\'967) and OFAT parameter sensitivity screening.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Configuration\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test1.cfg
+\f2\fs24 \uc0\u8232 This configuration sets the minimal constants to keep the state space tractable while covering all logical paths:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxVCId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxPUFId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxSiPId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxChipletId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxNonce = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+MaxSession = 1
+\f2\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 These settings ensure that each major entity (PUF, VC, SiP, Session) participates at least once, enabling full traversal of the credential and revocation logic without combinatorial branching.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Specification\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla
+\f2\fs24 \uc0\u8232 This is the 
+\f0\b final verified specification
+\f2\b0  incorporating:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Time-bounded attestations (
+\f1\fs26 AttestationTTL
+\f2\fs24 )\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Tamper-detection through 
+\f1\fs26 HasSupplyChainTamperingIndicators
+\f2\fs24 \
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Revocation logic (
+\f1\fs26 RevokeMicrocredential
+\f2\fs24 , 
+\f1\fs26 RevokeChiplet
+\f2\fs24 )\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Persistent revocation guards (
+\f1\fs26 NoIntegrateRevoked
+\f2\fs24 , 
+\f1\fs26 NoVerifyRevoked
+\f2\fs24 )\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Sparse dynamic stores for challenges, responses, and ledger entries.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 It corresponds to the 
+\f3\i \'93final model\'94
+\f2\i0  described in the paper \'97 the first version that completes verification with zero invariant violations under bounded constants.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 Execution\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Log:
+\f2\b0  
+\f1\fs26 output.o2099110
+\f2\fs24 \uc0\u8232 This file contains the TLC execution trace and statistics for the baseline run.\u8232 Typical output summary:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+States generated:
+\f2\b0  ~150\'96200\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Distinct states:
+\f2\b0  ~80\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Search depth:
+\f2\b0  4\'966\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Runtime:
+\f2\b0  ~1 s\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Invariant violations:
+\f2\b0  None\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 These results confirm that the specification is stable, complete, and logically consistent before scaling experiments.\
+}

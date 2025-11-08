@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fmodern\fcharset0 Courier;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Test 2: Parameterized Scalability (Increased Credential Bound)\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\fs24 \cf0 Overview\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs26 \cf0 Test 2
+\f2\fs24  extends the baseline configuration from 
+\f1\fs26 Test 1
+\f2\fs24  to evaluate how increasing the Verifiable Credential bound (\\texttt\{MaxVCId\}) affects state-space growth and runtime.\uc0\u8232 This experiment forms part of the empirical state-space analysis series (Tests 1\'967), where parameter bounds are systematically increased to study scalability and to identify dominant sources of combinatorial expansion.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Purpose\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b0 \cf0 The purpose of this test is to:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Quantify the effect of doubling the credential bound on total and distinct state counts.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Validate that the system remains invariant-safe and tractable under expanded configuration.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Establish scaling behavior for Figures 1\'964 in the empirical state-space analysis.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Configuration\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test2.cfg
+\f2\fs24 \uc0\u8232 Derived from the baseline setup, with constants adjusted as follows:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxVCId = 2
+\f2\fs24  (doubled from the baseline value 1)\
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxPUFId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxSiPId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxChipletId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxNonce = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxSession = 1
+\f2\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 This isolates the contribution of credential multiplicity while keeping other factors constant.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Specification\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla
+\f2\fs24 \uc0\u8232 The verified final model including:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Time-bounded attestation and freshness via 
+\f1\fs26 AttestationTTL
+\f2\fs24 .\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tamper-aware exclusion through 
+\f1\fs26 HasSupplyChainTamperingIndicators
+\f2\fs24 .\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Permanent revocation enforcement (
+\f1\fs26 NoIntegrateRevoked
+\f2\fs24 , 
+\f1\fs26 NoVerifyRevoked
+\f2\fs24 ).\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sparse dynamic stores and symmetry reduction for tractable state enumeration.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 The logic and invariants remain identical to 
+\f1\fs26 Test 1
+\f2\fs24 ; only the bound for Verifiable Credentials is increased.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Execution\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Script:
+\f2\b0  
+\f1\fs26 submit_smallerbound_fixedstageissuer_symmetrycheck_increasesnoncesession_increasedMaxVCId_sparaseadd.sh
+\f2\fs24 \uc0\u8232 Executes TLC in parallel mode with tightened symmetry and sparse-store options to ensure efficient exploration.\
+
+\f0\b Log:
+\f2\b0  
+\f1\fs26 output.o2099117
+\f2\fs24 \uc0\u8232 Contains full TLC trace and runtime statistics.\
+Representative output summary:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 States generated:
+\f2\b0  \uc0\u8776  1,500 \'96 2,000\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Distinct states:
+\f2\b0  \uc0\u8776  800 \'96 900\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Depth:
+\f2\b0  6 \'96 7\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Runtime:
+\f2\b0  \uc0\u8776  4 \'96 6 s\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Invariant violations:
+\f2\b0  None\
+}

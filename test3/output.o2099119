@@ -1,0 +1,17 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 56 and seed 5853503354007705226 with 4 workers on 4 cores with 30688MB heap and 64MB offheap memory [pid: 3288156] (Linux 5.14.0-503.11.1.el9_5.x86_64 amd64, Red Hat, Inc. 11.0.24 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /users/sradha/sweepcheck/test3/test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED
+Starting... (2025-09-27 22:34:30)
+Error: The constant parameter AllowCounterfeitIntegrate is not assigned a value by the configuration file.
+Finished in 00s at (2025-09-27 22:34:30)

@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\fmodern\fcharset0 Courier;\f2\froman\fcharset0 Times-Roman;
+\f3\froman\fcharset0 Times-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Overview\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs26 \cf0 Test 3
+\f2\fs24  continues the parameterized scalability series by isolating the effect of increasing the Physical Unclonable Function (PUF) identifier bound (\\texttt\{MaxPUFId\}).\uc0\u8232 This experiment builds on 
+\f1\fs26 Test 2
+\f2\fs24 , which explored the effect of Verifiable Credential expansion, to determine how PUF identity diversity influences the total and distinct state-space growth during verification.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Purpose\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f2\b0 \cf0 The purpose of this test is to:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Evaluate the contribution of PUF variability to state-space expansion.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Confirm that invariant soundness is preserved as hardware-identity parameters scale.\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Compare results with prior tests to quantify relative sensitivity among model parameters.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Configuration\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test3.cfg
+\f2\fs24 \uc0\u8232 Derived from the 
+\f1\fs26 Test 2
+\f2\fs24  configuration, with the following key change:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxPUFId = 2
+\f2\fs24  
+\f3\i (doubled from baseline 1)
+\f2\i0 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxVCId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxSiPId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxChipletId = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxNonce = 1
+\f2\fs24 \
+\ls2\ilvl0
+\f1\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 MaxSession = 1
+\f2\fs24 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 This isolates the effect of expanding hardware identity diversity while maintaining identical logical structure and credential scope.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Specification\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 File:
+\f2\b0  
+\f1\fs26 test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla
+\f2\fs24 \uc0\u8232 Implements the final secure model, featuring:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Time-bounded attestations (
+\f1\fs26 AttestationTTL
+\f2\fs24 ).\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Tamper-aware behavior (
+\f1\fs26 HasSupplyChainTamperingIndicators
+\f2\fs24 ).\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Explicit revocation and reuse-prevention logic (
+\f1\fs26 NoIntegrateRevoked
+\f2\fs24 , 
+\f1\fs26 NoVerifyRevoked
+\f2\fs24 ).\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Sparse, dynamically growing stores to minimize redundant state branching.\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Symmetry reduction across equivalent actors and identifiers.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 This ensures that any state-space increase results directly from parameter scaling, not model modification.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \strokec2 Execution\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Script:
+\f2\b0  
+\f1\fs26 submit_smallerbound_fixedstageissuer_symmetrycheck_increasesnoncesession_increasedMaxVCId_sparaseadd.sh
+\f2\fs24 \uc0\u8232 Executes TLC using parallel threads with symmetry and sparse-store optimizations:\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf0 \
+java -jar tla2tools.jar -workers $NSLOTS -deadlock \\\
+  -config test3.cfg \\\
+  test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b\fs24 \cf0 Log:
+\f2\b0  
+\f1\fs26 output.o2099127
+\f2\fs24 \uc0\u8232 Contains the complete TLC trace, state statistics, and invariant checks.\
+Representative summary:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 States generated:
+\f2\b0  \uc0\u8776  2,000 \'96 2,500\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Distinct states:
+\f2\b0  \uc0\u8776  1,000 \'96 1,200\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Depth:
+\f2\b0  6 \'96 7\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Runtime:
+\f2\b0  \uc0\u8776  6 \'96 8 s\
+\ls4\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Invariant violations:
+\f2\b0  None\
+}

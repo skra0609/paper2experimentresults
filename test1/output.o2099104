@@ -1,0 +1,19 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Warning: Please run the Java VM which executes TLC with a throughput optimized garbage collector by passing the "-XX:+UseParallelGC" property.
+(Use the -nowarning option to disable this warning.)
+Running breadth-first search Model-Checking with fp 99 and seed -1862326421171604816 with 4 workers on 4 cores with 30688MB heap and 64MB offheap memory [pid: 274539] (Linux 5.14.0-503.11.1.el9_5.x86_64 amd64, Red Hat, Inc. 11.0.24 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /users/sradha/sweepcheck/test1/test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module test1_security_puf_based_securityview_step5_revocation_fixed2_FIXED
+Starting... (2025-09-27 22:24:21)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2025-09-27 22:24:21.
+Progress(6) at 2025-09-27 22:24:24: 18,544 states generated (18,544 s/min), 7,187 distinct states found (7,187 ds/min), 6,748 states left on queue.
+Progress(8) at 2025-09-27 22:25:24: 682,919 states generated (664,375 s/min), 247,628 distinct states found (240,441 ds/min), 229,098 states left on queue.
